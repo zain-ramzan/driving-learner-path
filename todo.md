@@ -8,4 +8,6 @@
 - [x] Build a simple sequential lesson interface with local completion persistence and next-lesson unlocking.
 - [x] Configure a GitHub Pages-compatible production build and repository workflow.
 - [ ] Verify the responsive layout, completion flow, persistence after refresh, and all source links.
-- [ ] Create a final project checkpoint and publish the repository through GitHub Pages.
+- [ ] Enable GitHub Pages for the pushed repository and confirm the Actions deployment.
+- [x] Fix the initial GitHub Actions workflow dependency setup.
+- [ ] Create a final project checkpoint and share the repository and published URL.
