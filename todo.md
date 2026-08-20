@@ -15,3 +15,6 @@
 - [x] Remove the desktop and mobile search controls and remove the New learning path control.
 - [x] Verify the updated responsive interface and static production build.
 - [x] Vercel deployment discontinued at the user's request; no persistent Vercel deployment will be created.
+- [x] Remove every red-boxed interface region from the supplied annotated reference.
+- [x] Replace the top channel link label with the exact channel name: Warraich patente.
+- [ ] Push the simplified interface to GitHub and verify the updated GitHub Pages deployment.

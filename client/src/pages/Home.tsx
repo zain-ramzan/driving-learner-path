@@ -7,8 +7,6 @@ import {
   ArrowUpRight,
   Check,
   CheckCircle2,
-  CircleHelp,
-  Command,
   ExternalLink,
   ListVideo,
   Menu,
@@ -23,6 +21,7 @@ import {
 import { toast } from "sonner";
 
 const channelUrl = "https://www.youtube.com/@warraichpatentebinpunjabi2783";
+const channelName = "Warraich patente";
 const progressStorageKey = "driving-learner-path-progress-v1";
 const themeStorageKey = "driving-learner-path-theme-v1";
 const languageStorageKey = "driving-learner-path-language-v1";
@@ -127,8 +126,7 @@ export default function Home() {
           </div>
         </div>
 
-        <nav className="sidebar-nav" aria-label={t.home}>
-          <a href="#workspace" className="nav-link nav-link-active"><Command size={18} /><span>{t.home}</span></a>
+        <nav className="sidebar-nav" aria-label={t.path}>
           <a href="#course-path" className="nav-link"><ListVideo size={18} /><span>{t.path}</span></a>
         </nav>
 
@@ -159,7 +157,6 @@ export default function Home() {
 
         <div className="sidebar-footer">
           <button className="nav-link" onClick={() => setIsDark((current) => !current)}>{isDark ? <Sun size={18} /> : <Moon size={18} />}<span>{isDark ? t.light : t.dark}</span></button>
-          <button className="nav-link" onClick={resetProgress}><RotateCcw size={18} /><span>{t.resetProgress}</span></button>
         </div>
       </aside>
 
@@ -170,14 +167,13 @@ export default function Home() {
           <button className="icon-button mobile-menu" aria-label={t.openMenu} onClick={() => setIsSidebarOpen(true)}><Menu size={20} /></button>
           <div className="mobile-brand">Driving Learner Path</div>
           <div className="header-actions">
-            <a className="quiet-action" href={channelUrl} target="_blank" rel="noreferrer">{t.source} <ExternalLink size={15} /></a>
+            <a className="quiet-action" href={channelUrl} target="_blank" rel="noreferrer">{channelName} <ExternalLink size={15} /></a>
             <label className="language-control"><span className="sr-only">{t.language}</span><select value={language} onChange={(event) => setLanguage(event.target.value as Language)} aria-label={t.language}><option value="en">English</option><option value="ur">اردو</option><option value="hi">हिन्दी</option></select></label>
-            <button className="icon-button" aria-label={t.about} onClick={() => toast.message(t.help)}><CircleHelp size={19} /></button>
           </div>
         </header>
 
         <div className="workspace-content" id="course-path">
-          <section className="welcome-block" aria-labelledby="welcome-title"><p className="eyebrow">{t.selfPaced}</p><h1 id="welcome-title">{t.welcome}</h1><p className="welcome-copy">{t.introduction}</p></section>
+          <section className="welcome-block" aria-labelledby="welcome-title"><h1 id="welcome-title">{channelName}</h1></section>
 
           <section className="lesson-canvas" id="lesson-player" aria-labelledby="current-chapter-title">
             <div className="learner-message"><span className="message-label">{t.current}</span><p>{activeChapter.name}</p></div>
