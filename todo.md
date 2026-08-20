@@ -11,3 +11,7 @@
 - [x] Enable GitHub Pages for the pushed repository and confirm the Actions deployment.
 - [x] Fix the initial GitHub Actions workflow dependency setup.
 - [ ] Create a final project checkpoint and share the repository and published URL.
+- [x] Add Urdu and Hindi interface-language options while preserving channel-sourced lesson data.
+- [x] Remove the desktop and mobile search controls and remove the New learning path control.
+- [x] Verify the updated responsive interface and static production build.
+- [x] Vercel deployment discontinued at the user's request; no persistent Vercel deployment will be created.
